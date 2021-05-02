@@ -47,3 +47,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# App environment variables
+config/app.json
