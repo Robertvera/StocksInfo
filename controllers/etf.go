@@ -20,7 +20,7 @@ func NewETFController(a *app.App) *ETFController {
 	return &ETFController{a}
 }
 
-func (etf *ETFController) fetchETFInfo(w http.ResponseWriter, r *http.Request) {
+func (etf *ETFController) FetchETFInfo(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
 

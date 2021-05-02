@@ -12,7 +12,7 @@ func NewRouter(a *app.App) *mux.Router {
 	// Controllers
 	etf := controllers.NewETFController(a)
 
-	router.HandleFunc("/fetch/etf/{id}", etf.fetchETFInfo).Methods("GET")
+	router.HandleFunc("/fetch/etf/{id}", etf.FetchETFInfo).Methods("GET")
 
 	return router
 }
