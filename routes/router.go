@@ -10,9 +10,10 @@ func NewRouter(a *app.App) *mux.Router {
 	router := mux.NewRouter()
 
 	// Controllers
-	etf := controllers.NewETFController(a)
+	security := controllers.NewSecurityController(a)
 
-	router.HandleFunc("/fetch/etf/{id}", etf.FetchETFInfo).Methods("GET")
+	router.HandleFunc("/fetch/security/{id}", security.FetchSecurityInfo).Methods("GET")
+	router.HandleFunc("/save/security/{id}", security.SaveSecurityInfo).Methods("POST")
 
 	return router
 }
